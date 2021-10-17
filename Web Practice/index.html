@@ -19,13 +19,27 @@
   <!-- ======================================================== BODY ======================================================== -->
   <body>
 
-    <!-- ======================== HEADER EXAMPLES ======================== -->
-    <h1>This is a first level heading in HTML. With CSS, I will turn this into red color</h1>
-    <h2>This is a second level heading in HTML. With CSS, I will turn this into blue color</h2>
-    <h3>This is a third level heading in HTML. With CSS, I will turn this into green color</h3>
-    <h4>This is a 4<sup>th</sup> level heading in HTML. With CSS, I will turn this into pink color</h4>
-    <h5>This is a 5<sup>th</sup> level heading in HTML. With CSS, I will turn this into light green color</h5>
-    <h6>This is a 6<sup>th</sup> level heading in HTML. With CSS, I will turn this into light blue color</h6>
+    <!-- ========================= HEADER EXAMPLE ========================= -->   
+    <header id="radu_header">
+      <h1 id="h1_rh">RI Page</h1>
+    </header> 
+
+    <!-- ======================= NAVIGATION EXAMPLE ======================= --> 
+    <nav id="radu_nav">
+      <ul id="nav_ul">
+        <li><a href="#">Baby</a></li>
+        <li><a href="#">Kid</a></li>
+        <li><a href="#">Junior</a></li>
+      </ul>
+    </nav>
+
+    <!-- ======================== HEADING EXAMPLES ======================== -->
+    <h1>This is a first level heading in HTML. With CSS, I will turn this into red color.</h1>
+    <h2>This is a second level heading in HTML. With CSS, I will turn this into green color.</h2>
+    <h3>This is a third level heading in HTML. With CSS, I will turn this into blue color.</h3>
+    <h4>This is a 4<sup>th</sup> level heading in HTML. With CSS, I will turn this into pink color.</h4>
+    <h5>This is a 5<sup>th</sup> level heading in HTML. With CSS, I will turn this into light green color.</h5>
+    <h6>This is a 6<sup>th</sup> level heading in HTML. With CSS, I will turn this into light blue color.</h6>
     
     <p>This is a <em>paragragh</em> As you can see, I placed an empahisis on the word "paragraph". 
     Now, I will change also the background color of the word "paragraph" to black, and its text color 
@@ -43,7 +57,7 @@
     <p>First number:<span id= "firstNum">2</span> </p>
     <p>Second number: <span id= "secondNum">7</span> </p>
     <p>Therefore, the sum of the two of those numbers is: <span id= "answer">(placeholder for the answer)</span></p>
-    <input type="button" id="sumButton" value="Click to add!" onclick="addNumbers()">
+    <input style="border-radius: 50px;" type="button" id="sumButton" value="Click to add!" onclick="addNumbers()">
     
     <p>Another paragraph</p>
 
@@ -146,6 +160,55 @@
 
       </form>
 
+    </div>
+
+    <iframe src="https://www.javatpoint.com/" height="300" width="400"></iframe><br>
+
+    <canvas id="myCanvas1" width="300" height="100" style="border:2px solid;">    
+      Your browser does not support the HTML5 canvas tag.    
+    </canvas><br>
+
+    <svg width="100" height="100">    
+      <circle cx="50" cy="50" r="40" stroke="yellow" stroke-width="4" fill="red" />    
+    </svg>     
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>asd</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>asd</td>
+          <td>asd</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table border="1">
+      <tr>
+        <td colspan="4"></td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <div>
+      Text
+    </div>
+
+    <div id="container">
+      <div class="f">First</div>
+      <div class="s">Second</div>
     </div>
 
   </body>
