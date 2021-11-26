@@ -1,5 +1,13 @@
-p
-{
-    color: blue;
-    font-size: 100px;
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 80px;
 }
