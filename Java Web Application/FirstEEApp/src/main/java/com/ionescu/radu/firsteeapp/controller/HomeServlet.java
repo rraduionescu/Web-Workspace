@@ -14,17 +14,10 @@ public class HomeServlet extends HttpServlet
 {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
     {
-        request.setAttribute("output", "ThisIsTheOutput");
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/view/home.jsp");
-        dispatcher.forward(request, response);
-    }
-
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
-    {
         PrintWriter pr = response.getWriter();
         pr.println(DBUsers.getUsers());
-        request.setAttribute("output", "ThisIsTheOutput");
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/view/home.jsp");
-        dispatcher.forward(request, response);
+        //request.setAttribute("output", "ThisIsTheOutput");
+        //RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/view/home.jsp");
+        //dispatcher.forward(request, response);
     }
 }

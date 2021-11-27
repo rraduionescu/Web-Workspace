@@ -12,10 +12,10 @@ public class DBUsers
         String result = null;
         try
         {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:7392/brands_test","root","qweasdzxc");
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test","admin","1234");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select * from users");
+            ResultSet resultSet = statement.executeQuery("select * from user");
             while(resultSet.next())
             {
                 result = resultSet.getInt(1)+"  "+resultSet.getString(2)+"  "+resultSet.getString(3) + " " + resultSet.getString(4);
@@ -24,9 +24,8 @@ public class DBUsers
         }
         catch(Exception e)
         {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
-        System.out.println(result);
         return result;
     }
 }
