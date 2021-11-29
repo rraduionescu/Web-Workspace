@@ -27,7 +27,6 @@ public class InvoiceParser
 		PDFParser          pdfParser       = new PDFParser();
 		pdfParser.parse(fileInputStream, contentHandler, metadata, parseContext);
 		String pdfText = contentHandler.toString();
-		System.out.println(pdfText);
 
 		// EXTRACT PRODUCTS TEXT
 		ArrayList<String> products = new ArrayList<>();

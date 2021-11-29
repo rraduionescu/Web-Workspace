@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.ionescu.radu.firsteeapp.model.classes.Product" %><%--
   Created by IntelliJ IDEA.
   User: IonescuRadu
   Date: 29.11.2021
@@ -20,5 +21,54 @@
         <h3>
             NIR
         </h3>
+        <br>
+        <div id="sql_div">
+            <textarea rows="200" cols="300" id="statement" name="statement"><%=request.getAttribute("table")%></textarea><br>
+        </div>
+    <table>
+        <thead>
+            <th>#</th>
+            <th>Brand</th>
+            <th>SKU</th>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>RON Price</th>
+            <th>Total Price</th>
+            <th>Color Code</th>
+            <th>Composition</th>
+            <th>Collection</th>
+            <th>Origin</th>
+        </thead>
+        <tbody>
+        <%
+        ArrayList<Product> products = (ArrayList<Product>)request.getAttribute("products");
+        int i=1;
+		for(Product product : products)
+        {%>
+        <tr>
+            <td><%=i%></td>
+            <td><%=product.getBrand()%></td>
+            <td><%=product.getSKU()%></td>
+            <td><%=product.getName()%></td>
+            <td><%=product.getColor()%></td>
+            <td><%=product.getSize()%></td>
+            <td><%=product.getQuantity()%></td>
+            <td><%=product.getPrice()%></td>
+            <td><%=product.getPriceRON()%></td>
+            <td><%=product.getPriceTotal()%></td>
+            <td><%=product.getColorCode()%></td>
+            <td><%=product.getComposition()%></td>
+            <td><%=product.getCollection()%></td>
+            <td><%=product.getOrigin()%></td>
+        </tr>
+        <%
+        i++;
+		}
+        %>
+        </tbody>
+    </table>
     </body>
 </html>
